@@ -186,7 +186,7 @@ function aparecerFotos() {
             foto.style.opacity = "1";
             foto.style.transform = "translateY(0)";
 
-        }, index * 1000);
+        }, index * 2000);
 
     });
 
@@ -261,5 +261,18 @@ function lluviaCorazones() {
 reiniciar.addEventListener("click", () => {
 
     location.reload();
+
+});
+const moon=document.getElementById("moon");
+
+document.addEventListener("mousemove",(e)=>{
+
+    const x=(window.innerWidth/2-e.clientX)/40;
+
+    const y=(window.innerHeight/2-e.clientY)/40;
+
+    stars.style.transform=`translate(${x}px,${y}px)`;
+
+    moon.style.transform=`translate(${x*1.5}px,${y*1.5}px)`;
 
 });
